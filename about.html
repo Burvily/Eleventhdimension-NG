@@ -93,29 +93,44 @@
                 cursor: pointer;
                 text-align: center;
             }
-            
+
             .project-card:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             }
-            
+
             .project-card h3 {
                 color: #333;
                 margin-bottom: 15px;
                 font-size: 24px;
                 font-weight: 600;
             }
-            
+
             .project-card p {
                 color: #666;
                 line-height: 1.6;
                 margin-bottom: 20px;
             }
-            
+
+            /* NEW: Styles for company logos - adjusted to match original icon size */
+            .company-logo {
+                max-width: 50px; /* Slightly larger than 48px for some buffer, adjust as needed */
+                max-height: 50px; /* Ensures height is also constrained */
+                height: auto; /* Maintain aspect ratio */
+                display: block; /* Ensures proper margin and centering */
+                margin: 0 auto 20px auto; /* Center the logo and add bottom margin */
+            }
+
+            /* NEW: Grey shade for the cards */
+            .project-card.grey-card {
+                background-color: #f8f8f8; /* A light grey shade */
+            }
+
+            /* Optional: If .card-icon still has padding/margin from its old font-icon style, you might want to adjust it if it conflicts with image centering */
             .project-card .card-icon {
-                font-size: 48px;
-                color: #007bff;
-                margin-bottom: 20px;
+                /* You might need to remove font-size and color if they were inherited and causing issues */
+                /* font-size: 0; */ /* Example to "turn off" old font icon styling */
+                /* color: transparent; */
             }
         </style>
 
@@ -305,25 +320,23 @@
                     <p>Explore our innovative sister divisions of The Eleventh Dimension.</p>
                 </div>
             </div>
-            
+
             <div class="row">
-                <!-- Eleven Attribute Card -->
                 <div class="col-sm-6">
-                    <div class="project-card" onclick="window.open('https://elevenattribute.com', '_blank')">
+                    <div class="project-card grey-card" onclick="window.open('https://elevenattribute.com', '_blank')">
                         <div class="card-icon">
-                            <i class="icon-settings"></i>
+                            <img src="img/subsidiaries-logo/elevenattribute-logo.png" alt="Eleven Attribute Logo" class="company-logo">
                         </div>
                         <h3>Eleven Attribute</h3>
                         <p>Specialized consulting and project management services focused on delivering exceptional results through innovative methodologies and strategic planning. Our comprehensive approach ensures optimal project outcomes across various industries.</p>
                         <div style="color: #007bff; font-weight: 600;">Learn More →</div>
                     </div>
                 </div>
-                
-                <!-- Eleventh Scapes Card -->
+
                 <div class="col-sm-6">
-                    <div class="project-card" onclick="window.open('https://eleventhscapes.com', '_blank')">
+                    <div class="project-card grey-card" onclick="window.open('https://eleventhscapes.com', '_blank')">
                         <div class="card-icon">
-                            <i class="icon-home"></i>
+                            <img src="img/subsidiaries-logo/eleventhscapes-logo.png" alt="Eleven Scapes Logo" class="company-logo">
                         </div>
                         <h3>Eleventh Scapes</h3>
                         <p>Innovative landscape architecture and urban development solutions that transform spaces into sustainable, functional, and aesthetically pleasing environments. We create spaces that inspire and endure.</p>
